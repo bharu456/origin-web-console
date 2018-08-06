@@ -10,7 +10,9 @@
             stages {                                
                 stage('build') {
                     steps {
-                      sh 'ls -lrt'
+                      sh 'make build'
+                      sh 'grunt test'
+                      sh 'hack/verify-dist.sh'
                     } // steps
                 } // stage
             } // stages

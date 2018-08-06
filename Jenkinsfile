@@ -11,8 +11,9 @@
                 stage('build') {
                     steps {
                       sh 'make build'
-                      sh 'npm install grunt -g'
-                      sh 'grunt test'
+                      sh 'pwd'
+                      sh 'ls -lrt'
+                      sh './node_modules/grunt-cli/bin/grunt test'
                       sh 'hack/verify-dist.sh'
                     } // steps
                 } // stage

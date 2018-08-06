@@ -11,6 +11,7 @@
                 stage('build') {
                     steps {
                       sh 'make build'
+                      sh 'npm install grunt -g'
                       sh 'grunt test'
                       sh 'hack/verify-dist.sh'
                     } // steps
